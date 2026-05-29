@@ -1,4 +1,4 @@
-# HEXASHIELD
+## 🛡️ HEXASHIELD
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![Flask](https://img.shields.io/badge/Framework-Flask-black.svg)
