@@ -9,7 +9,7 @@
 
 ---
 
-## 🚀 Key Features
+##  Key Features
 
 * **Terminal-Driven Engine:** Multi-threaded packet ingestion backend with synchronous logging.
 * **SecOps Authentication Gateway:** Role-based operator identity portal with cryptographically secure session handling.
@@ -22,32 +22,34 @@
 
 ## 📸 System Walkthrough
 
+## 📸 System Walkthrough
+
 ### 1. Backend Ingestion Engine
 Hexashield initializes database lifecycles, starts the core multi-threaded sniffer worker, and prepares network interface listener bindings.
-![Terminal Initialization](assets/01-terminal-boot.jpg)
+![Terminal Initialization](01-terminal-boot.jpg)
 
 ### 2. Operator Identity Access Gateway
 Secure gateway login access preventing unauthenticated traffic manipulation. Operators input designated security credentials to provision an authenticated workspace session.
-![Login Page](assets/02-login-page.png)
-![Admin Credentials Verified](assets/03-admin-credentials.png)
+![Login Page](02-login-page.png)
+![Admin Credentials Verified](03-admin-credentials.png)
 
 ### 3. Dynamic SIEM Analytics Dashboard
 Once authenticated, security teams gain immediate access to core system telemetry, bandwidth indices, real-time alert tickers, and continuous geolocation capture pools.
-![SIEM Dashboard Overview](assets/04-dashboard.png)
+![SIEM Dashboard Overview](04-dashboard.png)
 
 ### 4. Traffic Metrics & Protocol Distributions
 Interactive visual mapping tracking telemetry balances between TCP, UDP, and ICMP concentrations alongside high-severity incident counters.
-![Analytics Charts](assets/05-analytics-charts.png)
+![Analytics Charts](05-analytics-charts.png)
 
 ### 5. Deep Packet Analysis Workspace
 Granular structural logs detailing transport payloads, localized timestamps, target vectors, and country classifications.
-![Packet Analyzer Engine](assets/06-packet-analyzer.png)
-![Packet Payload Inspection Window](assets/07-packet-details.png)
+![Packet Analyzer Engine](06-packet-analyzer.png)
+![Packet Payload Inspection Window](07-packet-details.png)
 
 ### 6. Automated Alert Integrations & Reporting Tools
 Instantly flag and pipe alerts to remote email boxes via the native SMTP transaction workflow, or downscale logs into portable CSV formats and executive PDF report tables.
-![Mail Integration Interface](assets/08-mail-integration.png)
-![Data Export Configuration Panel](assets/09-export-utilities.png)
+![Mail Integration Interface](08-mail-integration.png)
+![Data Export Configuration Panel](09-export-utilities.png)
 
 ---
 
