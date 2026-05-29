@@ -1,98 +1,234 @@
-# 🛡️ HEXASHIELD
+# HEXASHIELD
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org)
-[![Flask](https://img.shields.io/badge/Framework-Flask-black.svg)](https://flask.palletsprojects.com/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
+![Flask](https://img.shields.io/badge/Framework-Flask-black.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
 
-**Hexashield** is an advanced, lightweight SecOps Role Authentication Gateway and live SIEM (Security Information and Event Management) Network Packet Analyzer. Built with Python, Flask, and Scapy, it sniffs network traffic in real-time, categorizes protocols, maps geo-locations, and alerts security teams to suspicious behaviors via automated email integrations and detailed downloadable PDF/CSV reports.
+## Overview
 
----
+Hexashield is a lightweight Security Operations (SecOps) Authentication Gateway and Network Monitoring Platform built using Python, Flask, and Scapy. It provides real-time packet sniffing, role-based access control, security event detection, automated alerts, and report generation.
 
-##  Key Features
-
-* **Terminal-Driven Engine:** Multi-threaded packet ingestion backend with synchronized concurrency logging.
-* **SecOps Authentication Gateway:** Role-based access control (RBAC) operator identity gateway with cryptographically secure session handling.
-* **Real-time Traffic Sniffing:** Passive inspection of TCP, UDP, and ICMP structures via direct system network socket bindings.
-* **Dynamic Security Dashboard:** Modern, sleek dark-mode telemetry workspace featuring real-time data analytical updates.
-* **Email Alert Integration:** Instant SMTP notifications for rapid containment and triage of critical network anomalies.
-* **Data Export Capability:** Dedicated export managers to generate clean CSV network logs or professional executive PDF files.
+The system captures live network traffic, classifies protocol activity, identifies suspicious behavior patterns, and generates downloadable CSV and PDF reports for security analysis and auditing.
 
 ---
 
-##  Deployment & Installation Guide
+## Features
 
-Follow these sequential steps to configure your virtual environment, satisfy application dependencies, configure environment variables, and launch the platform framework cleanly.
+### Security Authentication Gateway
+- Role-Based Access Control (RBAC)
+- Secure session handling
+- Multiple user roles (Admin, SOC Analyst, Incident Response Operator)
 
-### 1. Prerequisites
-Ensure you have Python 3.8+ installed along with packet capture privileges (e.g., Npcap on Windows or `sudo` capabilities on Linux/macOS for network interface sniffing).
+### Real-Time Network Monitoring
+- Live packet capture using Scapy
+- TCP, UDP, ICMP traffic analysis
+- Multi-threaded packet processing
+- Continuous network logging
 
-### 2. Clone the Repository
+### Security Event Detection
+- Suspicious activity detection logic
+- Real-time alert generation
+- Security incident monitoring
+
+### Dashboard Interface
+- Dark-themed Flask dashboard
+- Live traffic visualization
+- Security event monitoring panel
+
+### Email Alert System
+- SMTP-based alerts
+- Instant security notifications
+- Configurable recipients
+
+### Reporting System
+- CSV export for logs
+- PDF report generation
+- Security audit documentation
+
+---
+
+## Technology Stack
+
+| Component | Technology |
+|------------|------------|
+| Backend | Python |
+| Framework | Flask |
+| Packet Analysis | Scapy |
+| Database | SQLite |
+| Reporting | CSV / PDF |
+| Notifications | SMTP |
+
+---
+
+## Project Structure
+
+```text
+HEXASHIELD/
+│
+├── Hexashield.py              # Main Flask app + packet sniffer engine
+├── requirements.txt           # Dependencies
+├── README.md                  # Documentation
+└── .gitignore                 # Git ignore rules
+```
+
+---
+
+## Prerequisites
+
+- Python 3.8+
+- Pip package manager
+- Npcap (Windows) or root privileges (Linux/macOS)
+- Admin access for packet sniffing
+
+---
+
+## Installation
+
+## 1. Clone the Repository
+
 ```bash
-git clone [https://github.com/YOUR_USERNAME/Hexashield.git](https://github.com/YOUR_USERNAME/Hexashield.git)
+git clone https://github.com/YOUR_USERNAME/Hexashield.git
 cd Hexashield
+```
 
-3. Initialize a Virtual Environment (venv)
-Isolate the platform environment architecture from your global system libraries.
+---
 
-On Windows:
+## 2. Create Virtual Environment
 
-DOS
+### Windows
+
+```cmd
 python -m venv venv
-On macOS / Linux:
+```
 
-Bash
+### Linux / macOS
+
+```bash
 python3 -m venv venv
-4. Activate the Virtual Environment
-Activate the terminal context before installing dependencies or executing runtime environments.
+```
 
-On Windows (Command Prompt):
+---
 
-DOS
+## 3. Activate Virtual Environment
+
+### Windows (CMD)
+
+```cmd
 venv\Scripts\activate
-On Windows (PowerShell):
+```
 
-PowerShell
+### Windows (PowerShell)
+
+```powershell
 .\venv\Scripts\Activate.ps1
-On macOS / Linux:
+```
 
-Bash
+### Linux / macOS
+
+```bash
 source venv/bin/activate
-Your terminal line should now display the (venv) tag prefix.
+```
 
-5. Install Project Dependencies
-Upgrade your local package manager and install the exact framework components listed in the requirements manifest:
+---
 
-Bash
+## 4. Install Dependencies
+
+```bash
 pip install --upgrade pip
 pip install -r requirements.txt
-6. Configure Environment Secrets
-To uphold strict security protocols and prevent static credential leaks, Hexashield processes mail relays directly out of your runtime terminal's environment variable buffer. Inject them into your workspace before launching:
+```
 
-On Windows (Command Prompt):
+---
 
-DOS
+## Configuration
+
+Set environment variables for email alert system:
+
+### Windows
+
+```cmd
 set HEXASHIELD_EMAIL=your-sender-email@gmail.com
 set HEXASHIELD_PASSWORD=your-google-app-password
 set HEXASHIELD_TARGET=security-alerts@yourdomain.com
-On macOS / Linux:
+```
 
-Bash
+### Linux / macOS
+
+```bash
 export HEXASHIELD_EMAIL="your-sender-email@gmail.com"
 export HEXASHIELD_PASSWORD="your-google-app-password"
 export HEXASHIELD_TARGET="security-alerts@yourdomain.com"
-7. Run the Application (With Admin Privileges)
-Because the Scapy backend must bind directly to your hardware network adapter to listen for raw packet streams, the script requires administrative elevation.
+```
 
-On Windows: (Open your terminal app with Run as Administrator privileges)
+---
 
-DOS
+## Run Application
+
+### Windows (Run as Administrator)
+
+```cmd
 python Hexashield.py
-On macOS / Linux:
+```
 
-Bash
+### Linux / macOS
+
+```bash
 sudo ./venv/bin/python Hexashield.py
-🚪 Accessing the SIEM Gateway
-Capture Bootstrap Accounts: Upon database initialization, check your terminal output. A secure runtime configuration matrix will print auto-generated credentials for your administrative and analyst operational tiers (admin, operator_soc1, operator_ir1). Copy these strings down immediately.
+```
 
-Launch Interface: Open your web browser of choice and interact with the gateway locally at:
+---
+
+## Access Dashboard
+
+After running the application, open:
+
+```text
 http://127.0.0.1:5000
+```
+
+Login credentials (auto-generated) will appear in the terminal for:
+- Admin
+- SOC Analyst
+- Incident Response Operator
+
+---
+
+## Security Features
+
+- Role-Based Access Control (RBAC)
+- Real-time packet inspection
+- Automated threat detection
+- Secure session management
+- Audit logging system
+- Security event monitoring
+
+---
+
+## Export Features
+
+- CSV export for network logs
+- PDF security reports
+- Incident analysis reports
+
+---
+
+## Future Enhancements
+
+- GeoIP threat intelligence integration
+- SIEM correlation engine
+- WebSocket live dashboard updates
+- REST API integration
+- Multi-factor authentication (MFA)
+- Advanced intrusion detection system
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+## Disclaimer
+
+This tool is intended for educational and authorized security monitoring purposes only. Unauthorized network monitoring is strictly prohibited.
